@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FF9800"
+        android:onClick="reset"
+        android:textColor="@color/black"
+        android:visibility="invisible" />
+
+
+    <GridLayout
+        android:id="@+id/GridLayout"
+        android:layout_width="368dp"
+        android:layout_height="368dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/board"
+        android:columnCount="3"
+        android:rowCount="3"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/image_View1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="dropIn"
+            android:tag="0"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:onClick="dropIn"
+            android:tag="1"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="12dp"
+            android:onClick="dropIn"
+            android:tag="2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:onClick="dropIn"
+            android:tag="3"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:onClick="dropIn"
+            android:tag="4"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View6"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="13dp"
+            android:onClick="dropIn"
+            android:tag="5"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View7"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:onClick="dropIn"
+            android:tag="6"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View8"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="17dp"
+            android:onClick="dropIn"
+            android:tag="7"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/image_View9"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="17dp"
+            android:onClick="dropIn"
+            android:tag="8"
+            tools:ignore="ContentDescription" />
+
+    </GridLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/flare" />
+</RelativeLayout>
